@@ -2,7 +2,7 @@ const express = require("express");
 const route = express.Router();
 const sendContactEmail  = require("../nodemailer/nodemailerConfig");
 
-route.post("/contact", async (req, res) => {
+route.post("/", async (req, res) => {
   const { name, email, message } = req.body;
   try {
     await sendContactEmail(name, email, message);
