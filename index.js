@@ -10,7 +10,7 @@ server.use(morgan("dev"));
 server.use(cors())
 server.use(express.json())
 
-server.use(require('./routes/contact'))
+server.use('/contact', require('./routes/contact'));
 
 const main = () => {
     server.listen(PORT, () => {
