@@ -9,10 +9,8 @@ server.use(morgan("dev"));
 server.use(cors());
 server.use(express.json());
 
-// Asegúrate de que esta línea maneje la ruta '/contact'
 server.use('/contact', require('./routes/contact'));
 
-// Manejo de ruta raíz para pruebas
 server.get('/', (req, res) => {
   res.send('Servidor en ejecución');
 });
